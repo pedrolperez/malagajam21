@@ -36,6 +36,7 @@ public class GhostEnemy : Enemy {
                 ChangeState(EnemyState.walk);
                 anim.SetBool("wakeUp", true);
                 
+                
             }
 
         }

@@ -11,6 +11,7 @@ public enum EnemyState
 }
 public class Enemy : MonoBehaviour
 {
+    
     [Header("Animator")]
     public Animator anim;
 
@@ -23,8 +24,10 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
-    
 
+    [Header("Player Health Signal")]
+    public Signal playerHealthSignal;
+    public FloatValue currentHealth;
     private void Awake()
     {
         health = maxHealth.initialValue;
@@ -34,13 +37,16 @@ public class Enemy : MonoBehaviour
         health = maxHealth.initialValue;
         currentState = EnemyState.idle;
     }
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
 
     {
         health -= damage;
+        
 
         if (health <= 0)
         {
+            currentHealth.RuntimeValue += 2;
+            playerHealthSignal.Raise();
             anim.SetBool("death", true);
             Destroy(this.gameObject, 1f);
         }

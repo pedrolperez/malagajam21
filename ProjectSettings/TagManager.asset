@@ -8,6 +8,7 @@ TagManager:
   - Mist
   - Item
   - interactable
+  - boss
   layers:
   - Default
   - TransparentFX

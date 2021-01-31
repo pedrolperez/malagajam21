@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2654885896273631942}
   - component: {fileID: 2654885896273631938}
   m_Layer: 0
-  m_Name: Ghost 1
+  m_Name: Ghost
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,7 +203,8 @@ MonoBehaviour:
   enemyName: Ghostly
   baseAttack: 2
   moveSpeed: 3
-  homePosition: {x: 18, y: 0}
+  playerHealthSignal: {fileID: 0}
+  currentHealth: {fileID: 0}
   myRigidbody: {fileID: 2654885896273631940}
   target: {fileID: 0}
   chaseRadius: 5
@@ -225,7 +226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2654885896897361486
 Transform:
   m_ObjectHideFlags: 0
@@ -301,7 +302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2654885896965157370
 Transform:
   m_ObjectHideFlags: 0
@@ -377,7 +378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2654885897645025103
 Transform:
   m_ObjectHideFlags: 0
@@ -453,7 +454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2654885897704919042
 Transform:
   m_ObjectHideFlags: 0
