@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum PlayerState
 {
@@ -13,12 +14,15 @@ public enum PlayerState
 
 public class PlayerMovement : MonoBehaviour
 {
+    private string mainMenu = "Menu"; 
     public PlayerState currentState;
     public GameObject question;
     public float speed;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
+    public FloatValue currentHealth;
+    public Signal playerHealthSignal;
 
     // Start is called before the first frame update
     void Start()
@@ -75,9 +79,22 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.MovePosition(transform.position + change * speed * Time.fixedDeltaTime);
     }
 
-    public void Knock(float knockTime)
+    public void Knock(float knockTime, float damage)
     {
-        StartCoroutine(knockCo(knockTime));
+        currentHealth.RuntimeValue -= damage;
+
+        if (currentHealth.RuntimeValue > 0)
+        {
+            playerHealthSignal.Raise();
+            StartCoroutine(knockCo(knockTime));
+        }
+        else
+        {
+            animator.SetBool("death", true);
+            Invoke("DisableAnim", 1f);
+            Invoke("SceneTransition", 3f);
+            
+        }
     }
     private IEnumerator knockCo(float knockTime)
     {
@@ -102,5 +119,13 @@ public class PlayerMovement : MonoBehaviour
         {
             question.SetActive(false);
         }
+    }
+    private void SceneTransition()
+    {
+        SceneManager.LoadScene(mainMenu);
+    }
+    private void DisableAnim()
+    {
+        this.gameObject.SetActive(false);
     }
 }
