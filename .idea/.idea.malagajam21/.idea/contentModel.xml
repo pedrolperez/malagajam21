@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\cupca\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\cupca\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_malagajam21.-810406935.00" t="ExcludeRecursive" />
+    <e p="C:\Users\cupca\Desktop\malagajam21" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="AnimatedTile.cs" t="Include" />
+          <e p="Boss.cs" t="Include" />
+          <e p="BossActivator.cs" t="Include" />
+          <e p="Dialog.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
+          <e p="FinalDialog.cs" t="Include" />
+          <e p="FirstDiag.cs" t="Include" />
+          <e p="FriendlySpirit.cs" t="Include" />
+          <e p="GhostEnemy.cs" t="Include" />
+          <e p="GoToMenu.cs" t="Include" />
+          <e p="HeartManager.cs" t="Include" />
+          <e p="ItemCounter.cs" t="Include" />
+          <e p="Knockback.cs" t="Include" />
+          <e p="LastItem.cs" t="Include" />
+          <e p="MenuController.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
+          <e p="SceneTransition.cs" t="Include" />
+          <e p="ScriptableObjects" t="Include">
+            <e p="FloatValue.cs" t="Include" />
+            <e p="Signal.cs" t="Include" />
+          </e>
+          <e p="SignalListener.cs" t="Include" />
+          <e p="TutorialHide.cs" t="Include" />
+          <e p="TutorialScript.cs" t="Include" />
+        </e>
+      </e>
+      <e p="malagajam21.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
